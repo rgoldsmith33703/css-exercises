@@ -8,6 +8,10 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
 }
 
 .container div {
@@ -21,19 +25,26 @@ body, html {
 
 .header {
   background-color: #FFDE22;
+  grid-column: 1 / 3;
 }
 
 .sidebar {
   background-color: #FF7755;
+  grid-column-end: 2;
+  grid-row: 2 / 5;
 }
 
 .nav {
   background-color: #00DDFF;
+  grid-row-end: 3;
+  grid-column-start: 2;
 }
 
 .article {
   background-color: #bccbde;
-}
+  grid-column-start: 2;
+  grid-row: 3/ 5;
+} 
 
 .article p {
   font-size: 18px;
@@ -44,4 +55,5 @@ body, html {
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / 3;
 }
